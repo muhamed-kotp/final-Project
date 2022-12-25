@@ -14,7 +14,7 @@ const Signup = () => {
   const [nameErorr, setnameErorr] = useState("User Name");
   const [age, setage] = useState(0);
   const [ageErorr, setageErorr] = useState("Age");
-  const [role, setrole] = useState("member");
+  const [role] = useState("member");
   const [gender, setgender] = useState("male");
   const [mail, setmail] = useState("");
   const [mailErorr, setmailErorr] = useState("E-mail");
@@ -37,6 +37,7 @@ const Signup = () => {
         
         x = true;
       }
+      return e;
     });
        if (x === false) {
         if (name === "" || !isNaN(name)) {
@@ -64,7 +65,9 @@ const Signup = () => {
             url: "http://localhost:9000/users",
             data: { name, age, role, mail, pass, gender },
           }).then((data) => navigate("/Signin"));
+       
         }
+     
       }
 
   };
@@ -151,6 +154,3 @@ const Signup = () => {
 
 export default Signup;
 
-{
-  /* <label class="allready form-label"> This E-mail is allready exist <br> you need to <a href="/Signin"><span class="allready-Text navbar-brand">Sign in</span></a></label> */
-}

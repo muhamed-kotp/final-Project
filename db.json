@@ -131,9 +131,9 @@
   ],
   "signinUser": [
     {
-      "name": "Kotp",
-      "mail": "mohamed.kotp@gmail.com",
-      "pass": "12345",
+      "name": "",
+      "mail": "",
+      "pass": "",
       "id": 1
     }
   ]

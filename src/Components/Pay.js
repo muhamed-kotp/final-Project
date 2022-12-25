@@ -13,7 +13,7 @@ const Pay = () => {
   const [nameErorr, setnameErorr] = useState("User Name");
   const [cardNo, setcardNo] = useState(0);
   const [cardNoErorr, setcardNoErorr] = useState("Card Number");
-  const [role, setrole] = useState("member");
+  const [role, ] = useState("member");
   const [payMethod, setpayMethod] = useState("male");
   const [mail, setmail] = useState("");
   const [mailErorr, setmailErorr] = useState("E-mail");
@@ -23,7 +23,7 @@ const Pay = () => {
 
   const Context = useContext(Store);
 
-  const formhandle = (e) => {
+  const payhandle = (e) => {
     e.preventDefault();
     let x = false;
     Context.storeUsers.map((e) => {
@@ -36,6 +36,7 @@ const Pay = () => {
         
         x = true;
       }
+      return e;
     });
        if (x === false) {
         if (name === "" || !isNaN(name)) {
@@ -67,9 +68,7 @@ const Pay = () => {
       }
 
   };
-  const payhandle =(e) =>{
-    e.preventDefault()
-  }
+
 
   return (
     <div>

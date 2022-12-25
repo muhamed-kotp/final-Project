@@ -15,14 +15,14 @@ import Details from "./Components/Details";
 import Newproducts from "./Components/Newproducts";
 import NewUser from "./Components/NewUser";
 import Edit from "./Components/Edit";
-import SideBar from "./Components/SideBar";
+
 import Dashboard from "./Components/Dashboard";
 import Users from "./Components/Users";
 import UserDetails from "./Components/UserDetails";
 import UserEdit from "./Components/UserEdit";
 import { useNavigate } from "react-router-dom";
 import Pay from "./Components/Pay";
-import Test from "./Components/Test";
+
 
 
 
@@ -42,9 +42,9 @@ const App = () => {
   const [fewestID, setfewestID] = useState(0);
   const [signinUser, setsigninUser] = useState("");
   const [mail, setmail] = useState("");
-  const [userNameErorr, setuserNameErorr] = useState("E-mail");
+  const [userNameErorr] = useState("E-mail");
   const [pass, setpass] = useState("");
-  const [passErorr, setpassErorr] = useState("Password");
+  const [passErorr] = useState("Password");
   const [incorrect, setincorrect] = useState("");
   const [total, settotal] = useState([]);
 
@@ -126,12 +126,13 @@ const App = () => {
           setRole(e.role);
           console.log(role);
         }
+        return e;
       });
     });
   };
   useEffect(() => {
     getRole();
-  }, [signinUser]);
+  },);
 
   const getsignUser = () => {
     axios({
@@ -166,6 +167,7 @@ const App = () => {
       } else {
         setincorrect("Incorrect e-mail or Password");
       }
+      return e;
     });
   };
   const writeMail = (e) => {
@@ -276,7 +278,7 @@ const App = () => {
           <Route path="/Control" element={<Control />} />
           <Route path="/Navs/ShoppingCarD" element={<ShoppingCarD />} />
           <Route path="/Navs" element={<Navs />} />
-          <Route path="/Test" element={<Test />} />
+     
           <Route path="/Products" element={<Products />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/Users" element={<Users />} />
