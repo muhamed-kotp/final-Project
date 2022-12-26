@@ -16,8 +16,8 @@ const Navs = () => {
 
   const TheName = Context.storesigninUser;
   const TheRole = Context.storeRole;
-  const [admin, setadmin] = useState("admin");
-  const [member, setmember] = useState("member");
+  const [admin, ] = useState("admin");
+  const [member, ] = useState("member");
 
   const signout = () => {
     axios({

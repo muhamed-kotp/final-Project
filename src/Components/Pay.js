@@ -19,7 +19,7 @@ const Pay = () => {
   const [mailErorr, setmailErorr] = useState("E-mail");
   const [pass, setpass] = useState("");
   const [passErorr, setpassErorr] = useState("Password");
-  const [allready, setallready] = useState("");
+
 
   const Context = useContext(Store);
 
@@ -32,7 +32,7 @@ const Pay = () => {
         setcardNoErorr("Card Number");
         setmailErorr("E-mail");
         setpassErorr("Password")
-        setallready(`This E-mail is allready exist \n you need to`);
+
         
         x = true;
       }
@@ -40,19 +40,19 @@ const Pay = () => {
     });
        if (x === false) {
         if (name === "" || !isNaN(name)) {
-          setallready("");
+        
           setnameErorr("Invalid User Name");
         } else if (cardNo <= 0) {
-          setallready("");
+         
           setnameErorr("User Name");
           setcardNoErorr("Invalid Card Number");
         } else if (mail === "") {
-          setallready("");
+          
           setnameErorr("User Name");
           setcardNoErorr("Card Number");
           setmailErorr("Please Enter Your E-mail");
         } else if (pass === "") {
-          setallready("");
+    
           setnameErorr("User Name");
           setcardNoErorr("Card Number");
           setmailErorr("E-mail");

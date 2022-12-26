@@ -36,11 +36,11 @@ const Home = () => {
       <Carousel className="carosal-container">
         <Carousel.Item className="carosal">
           <span className="darkBG"></span>
-          <img className="d-block w-100" src={LogoOne} alt="First slide" />
+          <img className="carosal-img1 d-block w-100" src={LogoOne} alt="First slide" />
         </Carousel.Item>
         <Carousel.Item className="carosal">
           <span className="darkBG"></span>
-          <img className="d-block w-100" src={logoTwo} alt="Second slide" />
+          <img className="carosal-img1 d-block w-100" src={logoTwo} alt="Second slide" />
         </Carousel.Item>
       </Carousel>
       {/* ---------------------------Scond - Group---------------------------------------------------- */}
